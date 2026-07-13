@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - LCCWA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            amber: '#f59e0b', // amber-500
+                            stoneBg: '#1c1917', // stone-900
+                            stoneText: '#44403c', // stone-700
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-stone-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-amber-500 text-stone-900 px-4 py-2 rounded shadow font-semibold z-50">
+        Skip to Main Content
+    </a>
+
+    <header class="bg-stone-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold tracking-wider text-amber-500">LCCWA</span>
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-6 text-sm font-medium tracking-wide">
+                <a href="index.html" class="text-amber-500 border-b-2 border-amber-500 transition-colors py-2">HOME</a>
+                
+                <div class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                        <span>ABOUT US</span>
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-stone-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block border border-stone-700">
+                        <a href="who-we-are.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Who We Are</a>
+                        <a href="our-leadership.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Our Leadership</a>
+                        <a href="newsletters.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Newsletters</a>
+                    </div>
+                </div>
+
+                <div class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                        <span>OUR PROGRAMS</span>
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-56 bg-stone-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block border border-stone-700">
+                        <a href="academic-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Academic Program</a>
+                        <a href="shakti-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Shakti Program</a>
+                        <a href="soft-skills-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Soft Skills Program</a>
+                        <a href="ankur-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Ankur Program</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="hover:text-amber-500 transition-colors py-2">CONTACT US</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle navigation menu">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block text-amber-500 py-2 font-medium">HOME</a>
+            
+            <div class="space-y-1">
+                <button id="mobile-about-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                    <span>ABOUT US</span>
+                    <svg id="mobile-about-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="mobile-about-submenu" class="hidden pl-4 bg-stone-900 rounded border-l-2 border-amber-500 py-1 space-y-1">
+                    <a href="who-we-are.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Who We Are</a>
+                    <a href="our-leadership.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Our Leadership</a>
+                    <a href="newsletters.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Newsletters</a>
+                </div>
+            </div>
+
+            <div class="space-y-1">
+                <button id="mobile-programs-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                    <span>OUR PROGRAMS</span>
+                    <svg id="mobile-programs-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="mobile-programs-submenu" class="hidden pl-4 bg-stone-900 rounded border-l-2 border-amber-500 py-1 space-y-1">
+                    <a href="academic-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Academic Program</a>
+                    <a href="shakti-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Shakti Program</a>
+                    <a href="soft-skills-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Soft Skills Program</a>
+                    <a href="ankur-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Ankur Program</a>
+                </div>
+            </div>
+
+            <a href="contact.html" class="block text-gray-300 hover:text-amber-500 py-2 font-medium">CONTACT US</a>
+        </div>
+    </header>
+
+    <main id="main-content" class="flex-grow">
+        
+        <section class="bg-stone-900 text-white relative py-20 md:py-28 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center md:text-left">
+                    <span class="text-xs font-bold tracking-widest text-amber-500 uppercase block">Welcome to LCCWA</span>
+                    <h1 class="text-4xl sm:text-5xl font-black tracking-tight leading-tight">
+                        Driving Positive Change Together
+                    </h1>
+                    <p class="text-stone-300 text-sm md:text-base leading-relaxed">
+                        LCCWA is a Mumbai-based non-profit organization dedicated to uplifting children from underprivileged communities in and around Powai. We work with students who attend overcrowded municipal and low-resourced private schools, where limited individual attention often affects learning outcomes.
+                    </p>
+                    <p class="text-amber-500 text-sm font-semibold italic">
+                        "Every day, together with you, LCCWA works to drive positive change, enriching the lives of its students and empowering women to create a brighter future."
+                    </p>
+                </div>
+                <div class="bg-stone-800 border border-stone-700 p-8 rounded-2xl shadow-xl space-y-4">
+                    <h2 class="text-2xl font-bold text-white tracking-tight">Our Core Mission</h2>
+                    <p class="text-stone-300 text-sm leading-relaxed">
+                        By providing supplementary academic support along with value-based education, we help bridge these gaps and nurture holistic development. Our mission is to enable children to learn more effectively, build confidence, develop strong values, and acquire the skills needed to create brighter, more independent futures for themselves and their communities.
+                    </p>
+                    <div class="pt-2">
+                        <a href="who-we-are.html" class="inline-block bg-amber-500 text-stone-900 font-bold px-5 py-2.5 rounded shadow text-sm hover:bg-amber-600 transition-colors">
+                            Learn More About Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+                <h2 class="text-3xl font-bold text-stone-900 tracking-tight">What We Do</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-sm uppercase tracking-wider">Regular Teaching</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            We run daily classes for students of pre-primary to class 12, with special focus on Maths and Science.
+                        </p>
+                    </div>
+                    <a href="academic-program.html" class="text-xs font-bold text-amber-600 hover:text-amber-700 pt-4 block">View details &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-sm uppercase tracking-wider">Daily Nutrition</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            A dedicated team of ladies, cook nutritious meals for our students everyday.
+                        </p>
+                    </div>
+                    <span class="text-xs text-stone-400 pt-4 block">Community Led</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-sm uppercase tracking-wider">Science Lab</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Our science lessons are complemented by hands-on experiments conducted at our science lab for better clarity of concepts.
+                        </p>
+                    </div>
+                    <span class="text-xs text-stone-400 pt-4 block">Hands-on Lab</span>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H3a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-sm uppercase tracking-wider">Computer Lab</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            Students from classes 5 to 10 attend daily computer lab sessions to develop their understanding of computers and software programs.
+                        </p>
+                    </div>
+                    <a href="soft-skills-program.html" class="text-xs font-bold text-amber-600 hover:text-amber-700 pt-4 block">View details &rarr;</a>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-sm flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-amber-500">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                        </div>
+                        <h3 class="font-bold text-stone-900 text-sm uppercase tracking-wider">Women Empowerment</h3>
+                        <p class="text-stone-600 text-xs leading-relaxed">
+                            At Shakti our women's wing, we teach women skills that would make them financially independent.
+                        </p>
+                    </div>
+                    <a href="shakti-program.html" class="text-xs font-bold text-amber-600 hover:text-amber-700 pt-4 block">View details &rarr;</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-stone-100 py-16 border-t border-b border-gray-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+                <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 border-b border-gray-300 pb-4">
+                    <h2 class="text-2xl font-bold text-stone-900 tracking-tight">Recent Events</h2>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-amber-600">LCCWA Sports Day 2025</span>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <div class="lg:col-span-2 bg-white p-8 rounded-2xl shadow-sm border border-gray-200 space-y-4">
+                        <span class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded">21st December 2025</span>
+                        <h3 class="text-xl font-bold text-stone-900">Celebrating Fitness, Fun, and Teamwork</h3>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            On 21st December, LCCWA celebrated Sports Day with great enthusiasm. Supported by Bharat Cares under SMEC Trust and HDFC’s Parivartan Small Grants Programme, students took part in races, Kho-Kho, Kabaddi, lemon and spoon race, and cricket.
+                        </p>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            Grade 11 and 12 volunteers helped organize the events. The cricket match was a highlight, with Grade 9 winning. Snacks and juice were served, and all participants received medals and trophies. We thank our sponsors for making the event successful.
+                        </p>
+                    </div>
+
+                    <div class="bg-stone-900 text-white p-6 rounded-2xl flex flex-col justify-between h-full min-h-[250px]">
+                        <div>
+                            <h4 class="font-bold text-amber-500 mb-2">Event Gallery</h4>
+                            <p class="text-stone-400 text-xs leading-relaxed">
+                                Experience moments of joy, competitive energy, and outstanding sportsmanship from our annual field tournaments.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-4 border-t border-stone-800">
+                            <button class="w-full text-center bg-stone-800 border border-stone-700 hover:border-amber-500 hover:text-amber-500 transition-colors py-2 rounded text-xs font-semibold tracking-wide">
+                                More Photos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <div class="text-center max-w-xl mx-auto space-y-2">
+                <h2 class="text-3xl font-bold text-stone-900 tracking-tight">From some of Our Students</h2>
+                <div class="w-16 h-1 bg-amber-500 mx-auto rounded"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-xs flex flex-col justify-between space-y-4">
+                    <p class="text-stone-600 text-sm leading-relaxed italic">
+                        "I am Shraddha Gupta, I am currently pursuing Masters in Data science from SIES college and I have done my graduation in Bsc. Computer science. I have been with LCCWA with more than 5 years, as a student I got to learn alot from my teachers. I am very grateful to share my experience and I want to thank them for their support and guidance."
+                    </p>
+                    <div class="pt-4 border-t border-gray-100 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-stone-900 text-amber-500 flex items-center justify-center font-bold text-sm">SG</div>
+                        <div>
+                            <h4 class="font-bold text-stone-900 text-sm">Shraddha Gupta</h4>
+                            <p class="text-[11px] text-stone-400 uppercase tracking-wider">M.Sc Data Science Alumna</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-xs flex flex-col justify-between space-y-4">
+                    <p class="text-stone-600 text-sm leading-relaxed italic">
+                        "I am Jyoti Prajapati, and I have been a student of LCCWA, where I learned a great deal and also worked for some time as a Science Teacher. I have completed my graduation in Chemistry, after which I shifted my focus to the field of Data Analysis and Data Science. Currently, I am working at Talent Skills Varsity Pvt. Ltd. as an MIS Executive in the Operations Department. I would like to express my sincere gratitude to LCCWA for always being there for me throughout this journey."
+                    </p>
+                    <div class="pt-4 border-t border-gray-100 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-amber-500 text-stone-900 flex items-center justify-center font-bold text-sm">JP</div>
+                        <div>
+                            <h4 class="font-bold text-stone-900 text-sm">Jyoti Prajapati</h4>
+                            <p class="text-[11px] text-stone-400 uppercase tracking-wider">MIS Executive, Operations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl border border-gray-200 shadow-xs flex flex-col justify-between space-y-4">
+                    <p class="text-stone-600 text-sm leading-relaxed italic">
+                        "I am Subha Nadar, I am currently studying in second year in Bachelor of science information technology, from Ratnam college of Arts science and commerce Bhandup West. I have been with LCCWA with more than 7 years (from 6 standard) as a student and I got to learn many things from my teachers. I am very grateful to share my wonderful experience and I want to thank them for their support and guidance. Thankyou so much.."
+                    </p>
+                    <div class="pt-4 border-t border-gray-100 flex items-center space-x-3">
+                        <div class="w-10 h-10 rounded-full bg-stone-900 text-amber-500 flex items-center justify-center font-bold text-sm">SN</div>
+                        <div>
+                            <h4 class="font-bold text-stone-900 text-sm">Subha Nadar</h4>
+                            <p class="text-[11px] text-stone-400 uppercase tracking-wider">B.Sc IT Student (7+ Yrs Joined)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-950 text-stone-400 text-xs py-8 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p>&copy; 2026 Life Care & Child Welfare Association (LCCWA). All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="index.html" class="hover:text-amber-500 transition-colors">Home</a>
+                <a href="who-we-are.html" class="hover:text-amber-500 transition-colors">About Us</a>
+                <a href="academic-program.html" class="hover:text-amber-500 transition-colors">Our Programs</a>
+                <a href="contact.html" class="hover:text-amber-500 transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Primary mobile drawer toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile About Us Submenu Accordion
+        const mobileAboutBtn = document.getElementById('mobile-about-btn');
+        const mobileAboutSubmenu = document.getElementById('mobile-about-submenu');
+        const mobileAboutArrow = document.getElementById('mobile-about-arrow');
+        mobileAboutBtn.addEventListener('click', () => {
+            mobileAboutSubmenu.classList.toggle('hidden');
+            mobileAboutArrow.classList.toggle('rotate-180');
+        });
+
+        // Mobile Our Programs Submenu Accordion
+        const mobileProgramsBtn = document.getElementById('mobile-programs-btn');
+        const mobileProgramsSubmenu = document.getElementById('mobile-programs-submenu');
+        const mobileProgramsArrow = document.getElementById('mobile-programs-arrow');
+        mobileProgramsBtn.addEventListener('click', () => {
+            mobileProgramsSubmenu.classList.toggle('hidden');
+            mobileProgramsArrow.classList.toggle('rotate-180');
+        });
+    </script>
+</body>
+</html>

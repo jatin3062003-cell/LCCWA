@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shakti - Empowering Women | LCCWA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+ <header class="bg-stone-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold tracking-wider text-amber-500">LCCWA</span>
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-6 text-sm font-medium tracking-wide">
+                <a href="index.html" class="text-amber-500 border-b-2 border-amber-500 transition-colors py-2">HOME</a>
+                
+                <div class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                        <span>ABOUT US</span>
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-stone-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block border border-stone-700">
+                        <a href="who-we-are.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Who We Are</a>
+                        <a href="our-leadership.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Our Leadership</a>
+                        <a href="newsletters.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Newsletters</a>
+                    </div>
+                </div>
+
+                <div class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                        <span>OUR PROGRAMS</span>
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-56 bg-stone-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block border border-stone-700">
+                        <a href="academic-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Academic Program</a>
+                        <a href="shakti-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Shakti Program</a>
+                        <a href="soft-skills-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Soft Skills Program</a>
+                        <a href="ankur-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Ankur Program</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="hover:text-amber-500 transition-colors py-2">CONTACT US</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle navigation menu">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block text-amber-500 py-2 font-medium">HOME</a>
+            
+            <div class="space-y-1">
+                <button id="mobile-about-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                    <span>ABOUT US</span>
+                    <svg id="mobile-about-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="mobile-about-submenu" class="hidden pl-4 bg-stone-900 rounded border-l-2 border-amber-500 py-1 space-y-1">
+                    <a href="who-we-are.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Who We Are</a>
+                    <a href="our-leadership.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Our Leadership</a>
+                    <a href="newsletters.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Newsletters</a>
+                </div>
+            </div>
+
+            <div class="space-y-1">
+                <button id="mobile-programs-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                    <span>OUR PROGRAMS</span>
+                    <svg id="mobile-programs-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="mobile-programs-submenu" class="hidden pl-4 bg-stone-900 rounded border-l-2 border-amber-500 py-1 space-y-1">
+                    <a href="academic-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Academic Program</a>
+                    <a href="shakti-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Shakti Program</a>
+                    <a href="soft-skills-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Soft Skills Program</a>
+                    <a href="ankur-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Ankur Program</a>
+                </div>
+            </div>
+
+            <a href="contact.html" class="block text-gray-300 hover:text-amber-500 py-2 font-medium">CONTACT US</a>
+        </div>
+    </header>
+    <main class="flex-grow">
+        
+        <div class="bg-stone-900 text-white py-16 px-6 text-center border-b border-gray-800">
+            <div class="container mx-auto max-w-3xl">
+                <span class="bg-amber-500 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full tracking-widest shadow-sm">LCCWA Initiatives</span>
+                <h1 class="text-3xl md:text-5xl font-black mt-3 mb-3 tracking-tight">Shakti: Empowering Women</h1>
+                <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">A specialized wing focused on bringing livelihood, financial literacy, and absolute community independence to women.</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-5xl">
+            <div class="bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div class="md:col-span-2 space-y-4">
+                    <h2 class="text-2xl font-black text-gray-900 tracking-tight">Self-Sufficiency & Independence</h2>
+                    <div class="w-12 h-1 bg-amber-500 rounded-full"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        <strong>Shakti</strong> is a dedicated initiative for women empowerment championed by <strong>Ms. Sarita Rustogi</strong>. The core purpose of this movement is to help women from underprivileged backgrounds break systemic patterns, uncover inner creativity, and evolve into financially independent pillars of their households.
+                    </p>
+                </div>
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-xl border border-amber-100/70 text-center">
+                    <div class="text-amber-500 mb-2"><i class="fa-solid fa-hand-holding-heart text-3xl"></i></div>
+                    <h4 class="font-extrabold text-sm text-gray-900 mb-1">Initiative Lead</h4>
+                    <p class="text-xs text-amber-700 font-semibold bg-white inline-block px-3 py-1 rounded-full shadow-sm">Ms. Sarita Rustogi</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100/60 border-t border-b border-gray-200/50 py-16">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Key Pillars of Shakti</h2>
+                    <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-2">How we structure livelihood enablement</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="text-amber-500 mb-3"><i class="fa-solid fa-book-open text-xl"></i></div>
+                            <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Empowerment & Education</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">Provides underprivileged neighborhood women with essential foundational literacy, numeric understanding, and modern skill training models.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="text-emerald-500 mb-3"><i class="fa-solid fa-wallet text-xl"></i></div>
+                            <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Financial Independence</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">Enables true household self-sufficiency through creative, revenue-generating handicrafts like crafting custom Diyas, modern bags, bookmarks, and keychains.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                        <div>
+                            <div class="text-blue-500 mb-3"><i class="fa-solid fa-store text-xl"></i></div>
+                            <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Direct Market Access</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">Offers concrete opportunities to present and retail finished handmade inventory by linking artisan efforts directly with verified consumers.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between md:col-span-1">
+                        <div>
+                            <div class="text-purple-500 mb-3"><i class="fa-solid fa-people-roof text-xl"></i></div>
+                            <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Deep Community Bond</h4>
+                            <p class="text-xs text-gray-600 leading-relaxed">Many active women within Shakti are mothers of enrolled LCCWA classroom youth, which reinforces a deeply integrated, resilient neighborhood safety network.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-stone-900 text-white p-6 rounded-xl shadow-sm border border-stone-800 md:col-span-2 flex flex-col justify-between">
+                        <div>
+                            <div class="text-amber-500 mb-3"><i class="fa-solid fa-utensils text-xl"></i></div>
+                            <h4 class="font-bold text-white mb-1.5 text-sm">Dual-Impact Nutrition Initiative</h4>
+                            <p class="text-xs text-gray-300 leading-relaxed">
+                                The talented women of Shakti take direct operational charge of managing standard kitchens to prepare freshly cooked, balanced evening nutritional meals for over <strong>300+ LCCWA students daily</strong>. This closes an impact loop: securing student health metrics while directly augmenting independent monthly household incomes for the mothers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <a href="#" onclick="alert('Shakti Catalogue coming soon!'); return false;" class="inline-flex items-center space-x-2 bg-amber-500 hover:bg-amber-600 text-white font-bold px-6 py-3 rounded-full shadow transition text-xs tracking-wider uppercase"><i class="fa-solid fa-download"></i> <span>Download Shakti Catalogue</span></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-4xl">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Shakti Community Events</h2>
+                <div class="w-12 h-1 bg-amber-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex items-start space-x-4">
+                    <div class="bg-amber-100 text-amber-600 p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-gifts text-lg"></i></div>
+                    <div>
+                        <h4 class="font-extrabold text-gray-900 text-sm">HSBC Diwali Mela Exhibition</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">Annual corporate festive pop-ups providing artisan mothers with premium avenues to catalog, exhibit, and retail customized seasonal merchandise directly to corporate buyers.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-xl shadow-md border border-gray-100 flex items-start space-x-4">
+                    <div class="bg-emerald-100 text-emerald-600 p-3 rounded-lg flex-shrink-0"><i class="fa-solid fa-award text-lg"></i></div>
+                    <div>
+                        <h4 class="font-extrabold text-gray-900 text-sm">National Conference Recognition</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">Proud formal commendations and operational case study presentations delivered at a prestigious social-welfare conference assembly hosted in Kerala.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-16 border-t-4 border-amber-500 mt-auto">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <h3 class="text-white font-black text-xl flex items-center tracking-tight">
+                    <span class="bg-amber-500 text-white p-1 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm mr-2.5 shadow-sm">L</span>
+                    LCCWA
+                </h3>
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Life Care & Child Welfare Association is a registered NGO operating in Mumbai, empowering lives via institutional education, safety, nutrition, and equal economic rights.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 text-gray-200">Quick Navigation</h4>
+                <ul class="space-y-2 text-sm font-medium">
+                    <li><a href="index.html" class="hover:text-amber-500 transition-colors duration-150">Home Dashboard</a></li>
+                    <li><a href="about.html" class="hover:text-amber-500 transition-colors duration-150">About Our Philosophy</a></li>
+                    <li><a href="programs.html" class="hover:text-amber-500 transition-colors duration-150">Social Development Initiatives</a></li>
+                    <li><a href="involved.html" class="hover:text-amber-500 transition-colors duration-150">Donate & Join Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 text-gray-200">Community Disclaimer</h4>
+                <p class="text-xs leading-relaxed text-gray-500">
+                    This layout maps core community data for educational modeling. All intellectual content, partner frameworks, and operational properties belong entirely to the verified domain association at lccwa.com.
+                </p>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 mt-12 pt-8 border-t border-gray-800 text-center text-xs tracking-wider font-medium text-gray-600">
+            &copy; 2026 Life Care & Child Welfare Association (LCCWA). All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

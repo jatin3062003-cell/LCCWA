@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - LCCWA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            amber: '#f59e0b', // amber-500
+                            stoneBg: '#1c1917', // stone-900
+                            stoneText: '#44403c', // stone-700
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 text-stone-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-amber-500 text-stone-900 px-4 py-2 rounded shadow font-semibold z-50">
+        Skip to Main Content
+    </a>
+
+    <header class="bg-stone-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold tracking-wider text-amber-500">LCCWA</span>
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-6 text-sm font-medium tracking-wide">
+                <a href="index.html" class="hover:text-amber-500 transition-colors py-2">HOME</a>
+                
+                <div class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                        <span>ABOUT US</span>
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-stone-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block border border-stone-700">
+                        <a href="who-we-are.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Who We Are</a>
+                        <a href="our-leadership.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Our Leadership</a>
+                        <a href="newsletters.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Newsletters</a>
+                    </div>
+                </div>
+
+                <div class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                        <span>OUR PROGRAMS</span>
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-56 bg-stone-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block border border-stone-700">
+                        <a href="academic-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Academic Program</a>
+                        <a href="shakti-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Shakti Program</a>
+                        <a href="soft-skills-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Soft Skills Program</a>
+                        <a href="ankur-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Ankur Program</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="text-amber-500 border-b-2 border-amber-500 transition-colors py-2">CONTACT US</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle navigation menu">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block text-gray-300 hover:text-amber-500 py-2 font-medium">HOME</a>
+            
+            <div class="space-y-1">
+                <button id="mobile-about-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                    <span>ABOUT US</span>
+                    <svg id="mobile-about-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="mobile-about-submenu" class="hidden pl-4 bg-stone-900 rounded border-l-2 border-amber-500 py-1 space-y-1">
+                    <a href="who-we-are.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Who We Are</a>
+                    <a href="our-leadership.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Our Leadership</a>
+                    <a href="newsletters.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Newsletters</a>
+                </div>
+            </div>
+
+            <div class="space-y-1">
+                <button id="mobile-programs-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                    <span>OUR PROGRAMS</span>
+                    <svg id="mobile-programs-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="mobile-programs-submenu" class="hidden pl-4 bg-stone-900 rounded border-l-2 border-amber-500 py-1 space-y-1">
+                    <a href="academic-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Academic Program</a>
+                    <a href="shakti-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Shakti Program</a>
+                    <a href="soft-skills-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Soft Skills Program</a>
+                    <a href="ankur-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Ankur Program</a>
+                </div>
+            </div>
+
+            <a href="contact.html" class="block text-amber-500 py-2 font-medium">CONTACT US</a>
+        </div>
+    </header>
+
+    <main id="main-content" class="flex-grow">
+        
+        <section class="bg-stone-900 text-white py-16 md:py-20 text-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+                <h1 class="text-4xl font-black tracking-tight">Contact Us</h1>
+                <p class="text-stone-400 text-sm max-w-lg mx-auto leading-relaxed">
+                    Get in touch with us to participate, partner, volunteer, or support our operations across underprivileged communities in Powai.
+                </p>
+                <div class="w-12 h-1 bg-amber-500 mx-auto rounded mt-2"></div>
+            </div>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-xs flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                        </div>
+                        <h2 class="text-lg font-bold text-stone-900 tracking-tight">Our Address</h2>
+                        <p class="text-stone-600 text-sm leading-relaxed font-medium">
+                            Shop no. 112, Bhavani Industrial,<br>
+                            Hare Krishna Road,<br>
+                            Opp Jain Mandir Road,<br>
+                            Powai 400076
+                        </p>
+                    </div>
+                    <span class="text-xs font-bold text-amber-600 mt-6 tracking-wide uppercase">Main Office & Center</span>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-xs flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        </div>
+                        <h2 class="text-lg font-bold text-stone-900 tracking-tight">Email Channels</h2>
+                        <p class="text-stone-600 text-sm leading-relaxed">
+                            For general communications, scheduling queries, and feedback, email:
+                        </p>
+                        <a href="mailto:lccwa.powai@gmail.com" class="block font-bold text-stone-900 hover:text-amber-600 transition-colors text-sm break-all">
+                            lccwa.powai@gmail.com
+                        </a>
+                    </div>
+                    <span class="text-xs font-bold text-amber-600 mt-6 tracking-wide uppercase">Digital Correspondence</span>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-gray-200 p-8 shadow-xs flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <div class="w-10 h-10 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                        </div>
+                        <h2 class="text-lg font-bold text-stone-900 tracking-tight">Phone Contacts</h2>
+                        <div class="space-y-3 pt-1">
+                            <div class="text-xs">
+                                <span class="block text-stone-400 font-medium">Office Administrator</span>
+                                <a href="tel:+919769474785" class="text-sm font-bold text-stone-950 hover:text-amber-600 transition-colors">+91 97694 74785</a>
+                            </div>
+                            <div class="text-xs">
+                                <span class="block text-stone-400 font-medium">CSR Details Contact</span>
+                                <a href="tel:+919930813369" class="text-sm font-bold text-stone-950 hover:text-amber-600 transition-colors">+91 99308 13369</a>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="text-xs font-bold text-amber-600 mt-6 tracking-wide uppercase">Inquiries Desk</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="bg-stone-100 border-t border-b border-gray-200 py-16">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+                <div class="text-center space-y-2">
+                    <h2 class="text-2xl font-bold text-stone-900 tracking-tight">Organization’s Statutory Details</h2>
+                    <p class="text-xs text-stone-500 uppercase tracking-widest font-semibold">Official Corporate Registration & Transparency Compliance</p>
+                    <div class="w-12 h-0.5 bg-amber-500 mx-auto rounded"></div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden divide-y divide-gray-100">
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-stone-500 uppercase tracking-wider sm:pt-0.5">Registered Office</span>
+                        <span class="text-sm text-stone-800 font-medium sm:col-span-2">503, Whispering Woods, Powai Vihar, Bldg 3, Powai, Mumbai-400076</span>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-stone-500 uppercase tracking-wider sm:pt-0.5">PAN Number</span>
+                        <span class="text-sm text-stone-900 font-mono font-bold tracking-wide sm:col-span-2">AABAL4153B</span>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-stone-500 uppercase tracking-wider sm:pt-0.5">Public Trust Registration</span>
+                        <span class="text-sm text-stone-800 font-medium sm:col-span-2">Maharashtra State, Mumbai 2652/2012 G.B.BS.D<br><span class="text-xs text-stone-400 font-normal">Date: 10th December 2012</span></span>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-stone-500 uppercase tracking-wider sm:pt-0.5">12A Registration</span>
+                        <span class="text-sm text-stone-800 font-medium font-mono sm:col-span-2">CIT (Exemptions) Mumbai /2025-26/12AA/21087</span>
+                    </div>
+                    <div class="p-4 sm:p-6 grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <span class="text-xs font-bold text-stone-500 uppercase tracking-wider sm:pt-0.5">80G Tax Exemption Status</span>
+                        <span class="text-sm text-stone-800 font-medium sm:col-span-2">Approved on 27th March 2026<br><span class="text-xs text-emerald-600 font-semibold tracking-wide uppercase">Valid Cycle: 2027-28 to 2031-32</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-stone-950 text-stone-400 text-xs py-8 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <p>&copy; 2026 Life Care & Child Welfare Association (LCCWA). All rights reserved.</p>
+            </div>
+            <div class="flex space-x-6">
+                <a href="index.html" class="hover:text-amber-500 transition-colors">Home</a>
+                <a href="who-we-are.html" class="hover:text-amber-500 transition-colors">About Us</a>
+                <a href="academic-program.html" class="hover:text-amber-500 transition-colors">Our Programs</a>
+                <a href="contact.html" class="hover:text-amber-500 transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Primary mobile drawer toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile About Us Submenu Accordion
+        const mobileAboutBtn = document.getElementById('mobile-about-btn');
+        const mobileAboutSubmenu = document.getElementById('mobile-about-submenu');
+        const mobileAboutArrow = document.getElementById('mobile-about-arrow');
+        mobileAboutBtn.addEventListener('click', () => {
+            mobileAboutSubmenu.classList.toggle('hidden');
+            mobileAboutArrow.classList.toggle('rotate-180');
+        });
+
+        // Mobile Our Programs Submenu Accordion
+        const mobileProgramsBtn = document.getElementById('mobile-programs-btn');
+        const mobileProgramsSubmenu = document.getElementById('mobile-programs-submenu');
+        const mobileProgramsArrow = document.getElementById('mobile-programs-arrow');
+        mobileProgramsBtn.addEventListener('click', () => {
+            mobileProgramsSubmenu.classList.toggle('hidden');
+            mobileProgramsArrow.classList.toggle('rotate-180');
+        });
+    </script>
+</body>
+</html>

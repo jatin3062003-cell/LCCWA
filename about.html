@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCCWA | About Us - Our Origin & Mission</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="bg-amber-500 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl">L</div>
+                <span class="font-bold text-xl tracking-tight text-gray-900">LCCWA</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="text-gray-600 hover:text-amber-500 transition">Home</a>
+                <a href="about.html" class="text-amber-600 font-bold border-b-2 border-amber-500 pb-1">About Us</a>
+                <a href="programs.html" class="text-gray-600 hover:text-amber-500 transition">Our Programs</a>
+                <a href="involved.html" class="text-gray-600 hover:text-amber-500 transition">Get Involved</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="involved.html" class="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-full font-semibold transition shadow-md">Donate Now</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-inner">
+            <a href="index.html" class="block text-gray-600 hover:text-amber-500 font-medium py-1">Home</a>
+            <a href="about.html" class="block text-amber-600 font-bold py-1">About Us</a>
+            <a href="programs.html" class="block text-gray-600 hover:text-amber-500 font-medium py-1">Our Programs</a>
+            <a href="involved.html" class="block text-gray-600 hover:text-amber-500 font-medium py-1">Get Involved</a>
+            <a href="involved.html" class="block bg-amber-500 text-white text-center px-4 py-2 rounded-md font-semibold mt-4">Donate Now</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <div class="bg-gray-100 py-16 border-b border-gray-200">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-900">About Our Association</h1>
+                <p class="text-gray-600 mt-2">Founded by a dedicated ecosystem from IIT Bombay & local Powai citizens.</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4 text-amber-600">Our Origin</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">Founded in <strong>2012</strong> by a proactive collective of local Powai citizens, retired faculty educators, and visionary alumni from <strong>IIT Bombay</strong>, LCCWA operates explicitly to bridge sharp educational inequalities[cite: 2].</p>
+                    <p class="text-gray-700 leading-relaxed">We step in directly where overcrowding in public municipalities or under-resourced private institutions prevents children and local women from securing their true potential[cite: 2, 3].</p>
+                </div>
+                
+                <div class="bg-amber-50 p-8 rounded-2xl border-l-8 border-amber-500 shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 text-gray-900"><i class="fa-solid fa-bullseye mr-2 text-amber-600"></i>Our Core Dual Mission</h3>
+                    <ul class="space-y-4 text-gray-700 text-sm">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-emerald-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Provide comprehensive educational, nutritional, and digital scaffolding to students up to Grade 12[cite: 3, 4, 5].</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-check text-emerald-600 mt-1 mr-3 flex-shrink-0"></i>
+                            <span>Equip community women with vocational dignity and economic independence to foster stable, self-reliant households[cite: 2, 6].</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t-4 border-amber-500">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-white font-bold text-lg mb-3 flex items-center"><span class="bg-amber-500 text-white p-1 rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs mr-2">L</span>LCCWA</h3>
+                <p class="text-sm leading-relaxed">Life Care & Child Welfare Association is a registered NGO operating in Mumbai, empowering lives via quality education, nutrition, and equal rights[cite: 1, 2].</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3">Quick Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-amber-500 transition">Home Dashboard</a></li>
+                    <li><a href="about.html" class="hover:text-amber-500 transition">About Our Philosophy</a></li>
+                    <li><a href="programs.html" class="hover:text-amber-500 transition">Social Development Programs</a></li>
+                    <li><a href="involved.html" class="hover:text-amber-500 transition">Donate & Join Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-3">Community Disclaimer</h4>
+                <p class="text-xs leading-relaxed text-gray-500">This layout maps community data for educational modeling. All core branding, partner frameworks, and operational properties belong entirely to the verified domain association at lccwa.com.</p>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-8 pt-6 border-t border-gray-800 text-center text-xs tracking-wider">
+            &copy; 2026 Life Care & Child Welfare Association (LCCWA). All Rights Reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

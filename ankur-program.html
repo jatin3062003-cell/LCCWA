@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankur Pre-Primary | LCCWA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+     <header class="bg-stone-900 text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+            <div class="flex-shrink-0">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <span class="text-2xl font-bold tracking-wider text-amber-500">LCCWA</span>
+                </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-6 text-sm font-medium tracking-wide">
+                <a href="index.html" class="text-amber-500 border-b-2 border-amber-500 transition-colors py-2">HOME</a>
+                
+                <div class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                        <span>ABOUT US</span>
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-48 bg-stone-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block border border-stone-700">
+                        <a href="who-we-are.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Who We Are</a>
+                        <a href="our-leadership.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Our Leadership</a>
+                        <a href="newsletters.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Newsletters</a>
+                    </div>
+                </div>
+
+                <div class="relative group py-2">
+                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                        <span>OUR PROGRAMS</span>
+                        <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div class="absolute left-0 mt-2 w-56 bg-stone-800 rounded-md shadow-lg py-1 z-50 hidden group-hover:block border border-stone-700">
+                        <a href="academic-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Academic Program</a>
+                        <a href="shakti-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Shakti Program</a>
+                        <a href="soft-skills-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Soft Skills Program</a>
+                        <a href="ankur-program.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-stone-700 hover:text-amber-500 transition-colors">Ankur Program</a>
+                    </div>
+                </div>
+
+                <a href="contact.html" class="hover:text-amber-500 transition-colors py-2">CONTACT US</a>
+            </nav>
+
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="text-gray-400 hover:text-white focus:outline-none" aria-label="Toggle navigation menu">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="hamburger" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 px-4 pt-2 pb-4 space-y-2">
+            <a href="index.html" class="block text-amber-500 py-2 font-medium">HOME</a>
+            
+            <div class="space-y-1">
+                <button id="mobile-about-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                    <span>ABOUT US</span>
+                    <svg id="mobile-about-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="mobile-about-submenu" class="hidden pl-4 bg-stone-900 rounded border-l-2 border-amber-500 py-1 space-y-1">
+                    <a href="who-we-are.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Who We Are</a>
+                    <a href="our-leadership.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Our Leadership</a>
+                    <a href="newsletters.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Newsletters</a>
+                </div>
+            </div>
+
+            <div class="space-y-1">
+                <button id="mobile-programs-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                    <span>OUR PROGRAMS</span>
+                    <svg id="mobile-programs-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                    </svg>
+                </button>
+                <div id="mobile-programs-submenu" class="hidden pl-4 bg-stone-900 rounded border-l-2 border-amber-500 py-1 space-y-1">
+                    <a href="academic-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Academic Program</a>
+                    <a href="shakti-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Shakti Program</a>
+                    <a href="soft-skills-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Soft Skills Program</a>
+                    <a href="ankur-program.html" class="block px-3 py-1.5 text-sm text-gray-400 hover:text-amber-500">Ankur Program</a>
+                </div>
+            </div>
+
+            <a href="contact.html" class="block text-gray-300 hover:text-amber-500 py-2 font-medium">CONTACT US</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <div class="bg-stone-900 text-white py-16 px-6 text-center border-b border-gray-800">
+            <div class="container mx-auto max-w-3xl">
+                <span class="bg-amber-500 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full tracking-widest shadow-sm">Early Childhood Wing</span>
+                <h1 class="text-3xl md:text-5xl font-black mt-3 mb-3 tracking-tight">Ankur Pre-Primary School</h1>
+                <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">Nurturing tender seedlings to help them sprout into resilient, capable, and vibrant individuals.</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-5xl">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center bg-white p-8 md:p-12 rounded-2xl shadow-xl border border-gray-100">
+                <div class="md:col-span-2 space-y-4">
+                    <h2 class="text-2xl font-black text-gray-900 tracking-tight">The Foundational Stepping Stone</h2>
+                    <div class="w-12 h-1 bg-amber-500 rounded-full"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Ankur signifies a tender seedling that, with attentive care and regular nutrition, will blossom into a strong, resilient tree over time. This beautiful philosophy defines our dedicated Pre-Primary School branch at LCCWA.
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Early childhood development is where young minds capture fundamental developmental concepts, creating a stable core framework for better reception of downstream higher academic syllabi. 
+                    </p>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Inaugurated on <strong>September 5, 2023</strong>, Ankur bridges the early developmental learning gap, serving as an vital prerequisite program directly linked into our established standard Remedial schooling wings.
+                    </p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-xl border border-amber-100/80 text-center space-y-2">
+                    <div class="text-amber-500"><i class="fa-solid fa-seedling text-4xl"></i></div>
+                    <span class="block text-4xl font-black text-gray-900">25+</span>
+                    <span class="text-xs font-bold text-amber-800 uppercase tracking-wider block">Active Sprouting Students</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100/60 border-t border-b border-gray-200/50 py-16">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Our Core Curriculum Focus</h2>
+                    <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-2">Nurturing growth using proven pedagogical principles</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                        <div class="text-emerald-500 mb-3"><i class="fa-solid fa-graduation-cap text-2xl"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-2 text-sm">Montessori Principles</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Self-directed, structured activity environments that guide kids toward physical development and natural comprehension milestones.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                        <div class="text-blue-500 mb-3"><i class="fa-solid fa-heart text-2xl"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-2 text-sm">Humane Values</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Instilling core cultural values of foundational social responsibility, discipline, collaborative play, and deep emotional empathy.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center">
+                        <div class="text-amber-500 mb-3"><i class="fa-solid fa-shapes text-2xl"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-2 text-sm">Essential Life Skills</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Cultivating communication accuracy, creative problem-solving capabilities, and independent focus to safely unlock potential.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-4xl">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">The Ankur Educator Team</h2>
+                <div class="w-12 h-1 bg-amber-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="space-y-8">
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                    <div class="w-16 h-16 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center font-black text-xl flex-shrink-0 shadow-inner">
+                        SG
+                    </div>
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="font-extrabold text-gray-900 text-base">Sutapa Ghosh</h3>
+                            <span class="text-xs font-bold text-amber-600 bg-amber-50 px-2.5 py-1 rounded border border-amber-100 mt-1 sm:mt-0">Founder of Ankur</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Deeply passionate about child psychology and teaching systems, Sutapa brings over 15 years of robust hands-on expertise in early educational design. Inspired by an unwavering goal to serve marginalized cohorts, she founded the Ankur branch on September 5, 2023, integrating core Montessori mechanics with structural civic values.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100 flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-6">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center font-black text-xl flex-shrink-0 shadow-inner">
+                        SM
+                    </div>
+                    <div>
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
+                            <h3 class="font-extrabold text-gray-900 text-base">Sudipta Mukherjee Mandal</h3>
+                            <span class="text-xs font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded border border-blue-100 mt-1 sm:mt-0">Creative Educator</span>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Sudipta is a dynamic, creative educator, specialized artist, and community development advocate. She holds academic degrees in Sociology and Education, supplemented by specialized advanced diplomas in Early Childhood Education. Closely linked with LCCWA since its foundational inception, she designs unique visual spaces inside Ankur that promote balance, creative expression, and student empathy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-stone-900 text-white p-6 rounded-xl text-center border border-stone-800">
+                <p class="text-xs md:text-sm font-semibold text-gray-300">
+                    <i class="fa-solid fa-circle-nodes text-amber-500 mr-2"></i> We are excited for the steady progress and the transformation of these bright young minds in the years ahead!
+                </p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-16 border-t-4 border-amber-500 mt-auto">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <h3 class="text-white font-black text-xl flex items-center tracking-tight">
+                    <span class="bg-amber-500 text-white p-1 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm mr-2.5 shadow-sm">L</span>
+                    LCCWA
+                </h3>
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Life Care & Child Welfare Association is a registered NGO operating in Mumbai, empowering lives via institutional education, safety, nutrition, and equal economic rights.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 text-gray-200">Quick Navigation</h4>
+                <ul class="space-y-2 text-sm font-medium">
+                    <li><a href="index.html" class="hover:text-amber-500 transition-colors duration-150">Home Dashboard</a></li>
+                    <li><a href="about.html" class="hover:text-amber-500 transition-colors duration-150">About Our Philosophy</a></li>
+                    <li><a href="programs.html" class="hover:text-amber-500 transition-colors duration-150">Social Development Initiatives</a></li>
+                    <li><a href="involved.html" class="hover:text-amber-500 transition-colors duration-150">Donate & Join Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 text-gray-200">Community Disclaimer</h4>
+                <p class="text-xs leading-relaxed text-gray-500">
+                    This layout maps core community data for educational modeling. All intellectual content, partner frameworks, and operational properties belong entirely to the verified domain association at lccwa.com.
+                </p>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 mt-12 pt-8 border-t border-gray-800 text-center text-xs tracking-wider font-medium text-gray-600">
+            &copy; 2026 Life Care & Child Welfare Association (LCCWA). All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

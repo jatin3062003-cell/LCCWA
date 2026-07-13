@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Programs | LCCWA</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans flex flex-col min-h-screen">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-3">
+                <div class="bg-amber-500 text-white p-2 rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl shadow-sm">L</div>
+                <span class="font-bold text-xl tracking-tight text-gray-900">LCCWA</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 font-semibold text-sm tracking-wide">
+                <a href="index.html" class="text-gray-600 hover:text-amber-500 transition-colors duration-200">Home</a>
+                <a href="about.html" class="text-gray-600 hover:text-amber-500 transition-colors duration-200">About Us</a>
+                <a href="programs.html" class="text-amber-500 border-b-2 border-amber-500 pb-1">Our Programs</a>
+                <a href="involved.html" class="text-gray-600 hover:text-amber-500 transition-colors duration-200">Get Involved</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="involved.html" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2.5 rounded-full font-bold text-sm transition-all duration-200 shadow-md hover:shadow-lg">Donate Now</a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-gray-600 focus:outline-none hover:text-amber-500 transition-colors">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3 shadow-md">
+            <a href="index.html" class="block text-gray-600 hover:text-amber-500 font-medium py-1">Home</a>
+            <a href="about.html" class="block text-gray-600 hover:text-amber-500 font-medium py-1">About Us</a>
+            <a href="programs.html" class="block text-amber-500 font-bold py-1">Our Programs</a>
+            <a href="involved.html" class="block text-gray-600 hover:text-amber-500 font-medium py-1">Get Involved</a>
+            <a href="involved.html" class="block bg-amber-500 text-white text-center px-4 py-2 rounded-full font-bold mt-4 shadow">Donate Now</a>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        
+        <div class="bg-stone-900 text-white py-16 px-6 text-center border-b border-gray-800">
+            <div class="container mx-auto max-w-3xl">
+                <h1 class="text-3xl md:text-5xl font-black mb-3 tracking-tight">Our Academic Program</h1>
+                <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">Providing high-impact educational frameworks to bridge learning gaps for underprivileged youth.</p>
+            </div>
+        </div>
+
+        <div class="bg-white border-b border-gray-100 py-16">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h2 class="text-xl font-extrabold text-gray-900 tracking-tight mb-3"><i class="fa-solid fa-triangle-exclamation text-amber-500 mr-2"></i>Problem Statement</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed mb-4">Children living in Mumbai’s low-income areas lack the basic facilities needed for them to learn, grow and become responsible citizens. With almost a quarter of all children in Mumbai living in these conditions, the future of the city will likely be defined by how it takes care of their development.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">The post-pandemic landscape has further escalated challenges due to inflation, educational gaps, and loss of key household livelihoods.</p>
+                    </div>
+                    <div class="bg-amber-50/50 p-6 rounded-2xl border border-amber-100">
+                        <h2 class="text-xl font-extrabold text-gray-900 tracking-tight mb-3"><i class="fa-solid fa-users text-amber-500 mr-2"></i>Background of Beneficiaries</h2>
+                        <p class="text-sm text-gray-600 leading-relaxed">Children living in the bustees of Powai come from challenging socio-economic situations. Their parents mostly work as construction workers, house-maids, auto-rickshaw drivers, labourers, or street vendors. Many are raised by resilient single mothers. What they share in common is minimal educational resources and an uncertain future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-5xl">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                
+                <div class="lg:col-span-2 space-y-6">
+                    <h2 class="text-2xl font-black text-gray-900 tracking-tight">Comprehensive Education Model</h2>
+                    <div class="w-12 h-1 bg-amber-500 rounded-full"></div>
+                    <p class="text-gray-600 text-sm leading-relaxed">We run throughout the year and conduct daily teaching sessions for 3rd - 12th grade (taking a month-long vacation in May). We teach students across the Maharashtra State Board, covering English, Marathi, Hindi, and Semi-English mediums. Admissions for 11th std start shortly after 10th board results are announced.</p>
+                    
+                    <div class="bg-gray-50 p-5 rounded-xl border border-gray-100 space-y-3">
+                        <h4 class="font-bold text-sm text-gray-900 flex items-center"><i class="fa-solid fa-square-poll-vertical text-amber-500 mr-2"></i>Rigorous Assessment Paths</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">We conduct rigorous selection testing for older students who wish to pursue the Science stream to ensure they can manage the intensive syllabus, alongside assessing Arts and Commerce students for foundational Mathematics mastery.</p>
+                    </div>
+
+                    <p class="text-gray-600 text-sm leading-relaxed">Our full-time teachers are ably supported by an excellent team of dedicated volunteers mostly hailing from the local Powai community and the <strong>IIT Bombay NSS group</strong>.</p>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-amber-500 text-center">
+                        <span class="block text-4xl font-black text-gray-900">30+</span>
+                        <span class="text-xs uppercase tracking-widest font-bold text-gray-400 block mt-1">Professional Educators</span>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-emerald-500 text-center">
+                        <span class="block text-4xl font-black text-gray-900">300+</span>
+                        <span class="text-xs uppercase tracking-widest font-bold text-gray-400 block mt-1">Enrolled Students</span>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500 text-center">
+                        <span class="block text-4xl font-black text-gray-900">100%</span>
+                        <span class="text-xs uppercase tracking-widest font-bold text-gray-400 block mt-1">SSC & HSC Pass Rate</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-stone-900 text-white p-6 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 shadow-lg">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-amber-500 p-3 rounded-xl text-white flex-shrink-0"><i class="fa-solid fa-desktop text-xl"></i></div>
+                    <p class="text-xs md:text-sm text-gray-300 leading-relaxed max-w-xl">By the generosity of our donors, we have recently acquired <strong>29 state-of-the-art desktop computers</strong> on which children from class 5 to 10 learn computer operations. Classrooms are fully WiFi-enabled with smart LED TVs.</p>
+                </div>
+                <div class="bg-stone-800 px-4 py-3 rounded-xl border border-stone-700 text-center flex-shrink-0">
+                    <span class="block text-amber-500 font-extrabold text-sm">Academic Year</span>
+                    <span class="text-xs font-bold text-white">2025 - 2026</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-gray-100/60 border-t border-b border-gray-200/50 py-16">
+            <div class="container mx-auto px-6 max-w-5xl">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Challenges Beyond Academics</h2>
+                    <p class="text-xs text-gray-500 uppercase font-bold tracking-widest mt-2">Holistic intervention strategies</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-emerald-500 mb-3"><i class="fa-solid fa-heart-pulse text-xl"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Health, Nutrition & Hygiene</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Inadequate nutrition and lack of hygiene awareness—especially menstrual health education for young girls—directly limits classroom concentration.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-blue-500 mb-3"><i class="fa-solid fa-wand-magic-sparkles text-xl"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Limited Exposure & Skills</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">A historical lack of extracurricular activities and basic computer access prevents children from achieving comprehensive potential milestones.</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <div class="text-amber-500 mb-3"><i class="fa-solid fa-house-chimney text-xl"></i></div>
+                        <h4 class="font-bold text-gray-900 mb-1.5 text-sm">Challenging Environments</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Difficult neighborhood surroundings render vulnerable youths susceptible to local negative, counterproductive systemic behaviors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 py-16 max-w-4xl">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">Student Success Stories</h2>
+                <div class="w-12 h-1 bg-amber-500 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border border-gray-100 flex flex-col sm:flex-row items-center sm:items-start space-y-6 sm:space-y-0 sm:space-x-6">
+                <div class="w-20 h-20 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center font-black text-2xl shadow-inner flex-shrink-0">
+                    K
+                </div>
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <h3 class="font-extrabold text-gray-900 text-lg">Komal</h3>
+                            <span class="text-xs font-semibold text-gray-400 block">Daughter of a Local Taxi Driver</span>
+                        </div>
+                        <span class="bg-emerald-50 text-emerald-600 font-bold text-xs px-2.5 py-1 rounded-md border border-emerald-100">81% in Arts (HSC)</span>
+                    </div>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        Komal joined LCCWA when she was in the 5th standard. She attributes her talent in writing entirely to the continuous encouragement she received here. She completed her Bachelor of Arts in Multimedia and Mass Communication at Mulund College of Commerce and aspires to become a professional journalist to drive systemic reform and champion women's empowerment.
+                    </p>
+                    <div class="text-xs font-medium text-amber-600 italic">"Our students are a constant source of true community inspiration."</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-900 text-gray-400 py-16 border-t-4 border-amber-500 mt-auto">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="space-y-4">
+                <h3 class="text-white font-black text-xl flex items-center tracking-tight">
+                    <span class="bg-amber-500 text-white p-1 rounded-full w-7 h-7 flex items-center justify-center font-bold text-sm mr-2.5 shadow-sm">L</span>
+                    LCCWA
+                </h3>
+                <p class="text-sm leading-relaxed text-gray-400">
+                    Life Care & Child Welfare Association is a registered NGO operating in Mumbai, empowering lives via institutional education, safety, nutrition, and equal economic rights.
+                </p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 text-gray-200">Quick Navigation</h4>
+                <ul class="space-y-2 text-sm font-medium">
+                    <li><a href="index.html" class="hover:text-amber-500 transition-colors duration-150">Home Dashboard</a></li>
+                    <li><a href="about.html" class="hover:text-amber-500 transition-colors duration-150">About Our Philosophy</a></li>
+                    <li><a href="programs.html" class="hover:text-amber-500 transition-colors duration-150">Social Development Initiatives</a></li>
+                    <li><a href="involved.html" class="hover:text-amber-500 transition-colors duration-150">Donate & Join Us</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold uppercase tracking-wider text-xs mb-4 text-gray-200">Community Disclaimer</h4>
+                <p class="text-xs leading-relaxed text-gray-500">
+                    This layout maps core community data for educational modeling. All intellectual content, partner frameworks, and operational properties belong entirely to the verified domain association at lccwa.com.
+                </p>
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 mt-12 pt-8 border-t border-gray-800 text-center text-xs tracking-wider font-medium text-gray-600">
+            &copy; 2026 Life Care & Child Welfare Association (LCCWA). All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (menuBtn && mobileMenu) {
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>
