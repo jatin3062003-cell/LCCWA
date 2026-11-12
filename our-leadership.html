@@ -18,10 +18,10 @@
             </div>
 
             <nav class="hidden md:flex space-x-6 text-sm font-medium tracking-wide">
-                <a href="index.html" class="text-amber-500 border-b-2 border-amber-500 transition-colors py-2">HOME</a>
+                <a href="index.html" class="hover:text-amber-500 transition-colors py-2">HOME</a>
                 
                 <div class="relative group py-2">
-                    <button class="flex items-center space-x-1 hover:text-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
+                    <button class="flex items-center space-x-1 text-amber-500 border-b-2 border-amber-500 transition-colors uppercase font-medium focus:outline-none" aria-haspopup="true">
                         <span>ABOUT US</span>
                         <svg class="w-4 h-4 transform group-hover:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -50,6 +50,7 @@
                 </div>
 
                 <a href="contact.html" class="hover:text-amber-500 transition-colors py-2">CONTACT US</a>
+                <a href="contact.html#support-a-child" class="bg-amber-500 text-stone-900 px-4 py-2 rounded-full font-bold hover:bg-amber-400 transition-colors">SUPPORT A CHILD</a>
             </nav>
 
             <div class="md:hidden">
@@ -62,10 +63,10 @@
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-stone-800 border-t border-stone-700 px-4 pt-2 pb-4 space-y-2">
-            <a href="index.html" class="block text-amber-500 py-2 font-medium">HOME</a>
+            <a href="index.html" class="block text-gray-300 hover:text-amber-500 py-2 font-medium">HOME</a>
             
             <div class="space-y-1">
-                <button id="mobile-about-btn" class="w-full flex justify-between items-center text-gray-300 hover:text-amber-500 py-2 font-medium focus:outline-none">
+                <button id="mobile-about-btn" class="w-full flex justify-between items-center text-amber-500 py-2 font-bold focus:outline-none">
                     <span>ABOUT US</span>
                     <svg id="mobile-about-arrow" class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -94,6 +95,7 @@
             </div>
 
             <a href="contact.html" class="block text-gray-300 hover:text-amber-500 py-2 font-medium">CONTACT US</a>
+            <a href="contact.html#support-a-child" class="block bg-amber-500 text-stone-900 text-center px-4 py-3 rounded-full font-bold mt-2">SUPPORT A CHILD</a>
         </div>
     </header>
     <main class="flex-grow">
@@ -103,40 +105,55 @@
                 <span class="bg-amber-500 text-white text-xs uppercase font-extrabold px-3 py-1 rounded-full tracking-widest shadow-sm">Governance & Strategy Team</span>
                 <h1 class="text-3xl md:text-5xl font-black mt-3 mb-3 tracking-tight">Meet Our Team</h1>
                 <p class="text-gray-400 text-sm md:text-base max-w-xl mx-auto leading-relaxed">The dedicated panel of trustees, educators, advisors, and volunteers driving our community framework forward.</p>
+                <img src="https://static.wixstatic.com/media/d8734e_eba59d2513694723855d42fe298ef439~mv2.jpeg/v1/fill/w_1200,h_700,al_c,q_90,enc_avif,quality_auto/d8734e_eba59d2513694723855d42fe298ef439~mv2.jpeg" alt="LCCWA community members taking part in an event" class="w-full max-w-3xl h-52 object-cover rounded-2xl mx-auto mt-8 shadow-lg">
             </div>
         </div>
 
-        <div class="container mx-auto px-6 py-16 max-w-5xl">
+        <section class="container mx-auto px-6 py-16 max-w-7xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+                <img src="https://static.wixstatic.com/media/d8734e_d30ee967bd784d28b3950e544ff37207~mv2.jpg/v1/fill/w_1200,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/GroupPhoto.JPG" alt="LCCWA teachers and volunteers" class="w-full h-64 lg:h-full min-h-72 object-cover" loading="lazy">
+                <div class="p-8 lg:p-10"><span class="text-xs font-bold uppercase tracking-widest text-amber-600">The people behind our work</span><h2 class="text-2xl font-black text-gray-900 tracking-tight mt-2">Our Team of Teachers &amp; Volunteers</h2><p class="text-sm text-gray-600 leading-relaxed mt-4">LCCWA is supported every day by dedicated teachers, volunteers and community members who help students learn, grow and feel supported.</p></div>
+            </div>
+        </section>
+
+        <section class="container mx-auto px-6 py-16 max-w-7xl">
             <div class="text-center max-w-2xl mx-auto mb-10">
                 <h2 class="text-2xl font-black text-gray-900 tracking-tight">Our Trustees</h2>
-                <div class="w-12 h-1 bg-amber-500 mx-auto mt-2 rounded-full"></div>
+                <p class="text-sm text-gray-600 mt-2">The people who guide LCCWA with experience, care and a shared commitment to its students.</p>
+                <div class="w-12 h-1 bg-amber-500 mx-auto mt-3 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start bg-white p-6 md:p-8 rounded-2xl shadow-md border border-gray-100">
-                <div class="md:col-span-1 bg-gray-50 border border-gray-200/60 rounded-xl p-6 text-center space-y-3">
-                    <div class="w-20 h-20 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center font-black text-2xl mx-auto shadow-inner">
-                        UC
-                    </div>
-                    <div>
-                        <h4 class="font-extrabold text-gray-900 text-base">Mr. Upal Chatterji</h4>
-                        <span class="text-xs font-bold text-amber-600 tracking-wider uppercase block mt-0.5">Secretary</span>
-                    </div>
-                    <div class="text-xs font-semibold text-gray-500 bg-white border border-gray-200 rounded py-1 px-2.5 inline-block">
-                        <i class="fa-solid fa-graduation-cap mr-1"></i> IIT Kharagpur Alumni
-                    </div>
-                </div>
-
-                <div class="md:col-span-2 space-y-4 pt-2">
-                    <h3 class="text-lg font-bold text-gray-900 border-b border-gray-100 pb-2">Operational Management & Stewardship</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        A retired Corporate Executive, IIT Kharagpur Alumni, and deeply concerned citizen, Mr. Chatterji channels years of premium corporate leadership into structured civic action. 
-                    </p>
-                    <p class="text-gray-600 text-sm leading-relaxed">
-                        He remains explicitly hands-on inside the organization, directing core student science coaching modules, operational field management, programmatic fundraising, and corporate marketing strategies. He assumes absolute executive oversight of the daily functioning of the LCCWA central office operations.
-                    </p>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+                <article class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="bg-amber-50 p-6 text-center"><img src="https://static.wixstatic.com/media/d8734e_ab9a21dff6aa4400809590f609becf0f~mv2.png/v1/fill/w_260,h_260,al_c,lg_1,q_85,enc_avif,quality_auto/3.png" alt="Prof. S.D. Agashe" class="w-28 h-28 object-cover rounded-full mx-auto ring-4 ring-white shadow"></div>
+                    <div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-gray-900 text-lg">Prof. S.D. Agashe</h3><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mt-1">Founding Member</p><p class="text-sm text-gray-600 leading-relaxed mt-4">Prof. Agashe is a retired Professor from IIT Bombay. His love for children and belief in nurturing their formative years have made him an integral part of LCCWA’s journey and major decisions.</p></div>
+                </article>
+                <article class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="bg-amber-50 p-6 text-center"><img src="https://static.wixstatic.com/media/d8734e_dc301818f994415a8572169255a624e4~mv2.jpg/v1/fill/w_260,h_260,al_c,lg_1,q_80,enc_avif,quality_auto/Picture1.jpg" alt="Mr. Upal Chatterji" class="w-28 h-28 object-cover rounded-full mx-auto ring-4 ring-white shadow"></div>
+                    <div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-gray-900 text-lg">Mr. Upal Chatterji</h3><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mt-1">Secretary</p><p class="text-sm text-gray-600 leading-relaxed mt-4">A retired Corporate Executive and IIT Kharagpur alumnus, he supports science teaching, operations management, fundraising and marketing, and oversees the functioning of the LCCWA office.</p></div>
+                </article>
+                <article class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="bg-amber-50 p-6 text-center"><img src="https://static.wixstatic.com/media/d8734e_5b7861390235459597c6bef45e48812c~mv2.jpg/v1/fill/w_260,h_260,al_c,q_80,enc_avif,quality_auto/supratik_img_small.jpg" alt="Prof. Supratik Chakraborty" class="w-28 h-28 object-cover rounded-full mx-auto ring-4 ring-white shadow"></div>
+                    <div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-gray-900 text-lg">Prof. Supratik Chakraborty</h3><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mt-1">Chairperson</p><p class="text-sm text-gray-600 leading-relaxed mt-4">A founding member from the Department of Computer Science & Engineering at IIT Bombay, he is a fellow of the Indian National Academy of Engineering and a distinguished IIT Kharagpur alumnus.</p></div>
+                </article>
+                <article class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="bg-amber-50 p-6 text-center"><img src="https://static.wixstatic.com/media/d8734e_6138249b4e064b5aaa1ec2870f4dc7db~mv2.jpg/v1/fill/w_260,h_260,al_c,lg_1,q_80,enc_avif,quality_auto/Picture3.jpg" alt="Mrs. Sarita Rustagi" class="w-28 h-28 object-cover rounded-full mx-auto ring-4 ring-white shadow"></div>
+                    <div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-gray-900 text-lg">Mrs. Sarita Rustagi</h3><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mt-1">Head of Women’s Wing – Shakti</p><p class="text-sm text-gray-600 leading-relaxed mt-4">A qualified Company Secretary, she leads Shakti, teaches Commerce to Classes XI and XII, and personally ensures that each child receives a nutritious evening meal.</p></div>
+                </article>
+                <article class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="bg-amber-50 p-6 text-center"><img src="https://static.wixstatic.com/media/d8734e_cf4ab95396434ce0866eb6d5fef5693c~mv2.jpeg/v1/fill/w_260,h_260,al_c,q_80,enc_avif,quality_auto/Anita.jpeg" alt="Mrs. Anita Menon" class="w-28 h-28 object-cover rounded-full mx-auto ring-4 ring-white shadow"></div>
+                    <div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-gray-900 text-lg">Mrs. Anita Menon</h3><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mt-1">Treasurer</p><p class="text-sm text-gray-600 leading-relaxed mt-4">A former banking professional, she leads academic programmes and student relations, coordinates Classes XI and XII, teaches English, and supports Finance and Accounts.</p></div>
+                </article>
+                <article class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition-shadow">
+                    <div class="bg-amber-50 p-6 text-center"><img src="https://static.wixstatic.com/media/d8734e_96aaf0bfdadb48d5953a260c9a44ef9f~mv2.jpg/v1/fill/w_260,h_260,al_c,lg_1,q_80,enc_avif,quality_auto/Picture4.jpg" alt="Mrs. Madhavi Rao" class="w-28 h-28 object-cover rounded-full mx-auto ring-4 ring-white shadow"></div>
+                    <div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-gray-900 text-lg">Mrs. Madhavi Rao</h3><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mt-1">Trustee</p><p class="text-sm text-gray-600 leading-relaxed mt-4">A psychologist and software developer, she has volunteered with LCCWA for a decade and supports children’s nutrition, co-curricular skills and women’s empowerment.</p></div>
+                </article>
+                <article class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden flex flex-col hover:shadow-lg transition-shadow md:col-span-2 xl:col-span-1">
+                    <div class="bg-amber-50 p-6 text-center"><img src="https://static.wixstatic.com/media/d8734e_89506dedfd29420bb2c780067da3c4ed~mv2.jpeg/v1/fill/w_260,h_260,al_c,q_80,enc_avif,quality_auto/Cavas%20Dumasia.jpeg" alt="Mr. Cavas Dumasia" class="w-28 h-28 object-cover rounded-full mx-auto ring-4 ring-white shadow"></div>
+                    <div class="p-6 flex flex-col flex-grow"><h3 class="font-extrabold text-gray-900 text-lg">Mr. Cavas Dumasia</h3><p class="text-xs font-bold text-amber-600 uppercase tracking-wider mt-1">Trustee</p><p class="text-sm text-gray-600 leading-relaxed mt-4">A retired Corporate Executive, Mechanical Engineer and MBA, he teaches Economics and works toward the academic excellence of LCCWA students.</p></div>
+                </article>
             </div>
-        </div>
+        </section>
 
         <div class="bg-gray-100/60 border-t border-b border-gray-200/50 py-16">
             <div class="container mx-auto px-6 max-w-5xl">

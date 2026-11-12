@@ -68,6 +68,7 @@
                 </div>
 
                 <a href="contact.html" class="text-amber-500 border-b-2 border-amber-500 transition-colors py-2">CONTACT US</a>
+                <a href="#support-a-child" class="bg-amber-500 text-stone-900 px-4 py-2 rounded-full font-bold hover:bg-amber-400 transition-colors">SUPPORT A CHILD</a>
             </nav>
 
             <div class="md:hidden">
@@ -112,6 +113,7 @@
             </div>
 
             <a href="contact.html" class="block text-amber-500 py-2 font-medium">CONTACT US</a>
+            <a href="#support-a-child" class="block bg-amber-500 text-stone-900 text-center px-4 py-3 rounded-full font-bold mt-2">SUPPORT A CHILD</a>
         </div>
     </header>
 
@@ -123,6 +125,7 @@
                 <p class="text-stone-400 text-sm max-w-lg mx-auto leading-relaxed">
                     Get in touch with us to participate, partner, volunteer, or support our operations across underprivileged communities in Powai.
                 </p>
+                <img src="https://static.wixstatic.com/media/d8734e_48abfd1b186442d9b97745ecbc370f0a~mv2.jpeg/v1/fill/w_1200,h_700,al_c,q_90,enc_avif,quality_auto/d8734e_48abfd1b186442d9b97745ecbc370f0a~mv2.jpeg" alt="LCCWA community members at an activity" class="w-full max-w-3xl h-48 object-cover rounded-2xl mx-auto mt-8 shadow-lg">
                 <div class="w-12 h-1 bg-amber-500 mx-auto rounded mt-2"></div>
             </div>
         </section>
@@ -182,6 +185,51 @@
                     <span class="text-xs font-bold text-amber-600 mt-6 tracking-wide uppercase">Inquiries Desk</span>
                 </div>
 
+            </div>
+        </section>
+
+        <section id="support-a-child" class="bg-white py-16 border-t border-gray-100 scroll-mt-24">
+            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-3 mb-8">
+                    <span class="inline-block text-xs font-bold uppercase tracking-widest text-amber-600">Make a difference</span>
+                    <h2 class="text-3xl font-black text-stone-900 tracking-tight">Support a Child</h2>
+                    <p class="text-sm text-stone-600 max-w-xl mx-auto">Tell us how you would like to help—through sponsorship, volunteering, partnerships, or other support. Our team will contact you.</p>
+                </div>
+                <form action="mailto:lccwa.powai@gmail.com" method="post" enctype="text/plain" class="bg-stone-900 text-white p-6 sm:p-8 rounded-2xl shadow-xl space-y-5">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="support-name" class="block text-sm font-bold mb-2">Full name</label>
+                            <input id="support-name" name="name" type="text" autocomplete="name" required class="w-full rounded-lg border border-stone-600 bg-stone-800 px-4 py-3 text-white placeholder:text-stone-400 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/30" placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="support-email" class="block text-sm font-bold mb-2">Email address</label>
+                            <input id="support-email" name="email" type="email" autocomplete="email" required class="w-full rounded-lg border border-stone-600 bg-stone-800 px-4 py-3 text-white placeholder:text-stone-400 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/30" placeholder="you@example.com">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="support-phone" class="block text-sm font-bold mb-2">Phone number <span class="text-stone-400 font-normal">(optional)</span></label>
+                            <input id="support-phone" name="phone" type="tel" autocomplete="tel" class="w-full rounded-lg border border-stone-600 bg-stone-800 px-4 py-3 text-white placeholder:text-stone-400 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/30" placeholder="Your phone number">
+                        </div>
+                        <div>
+                            <label for="support-type" class="block text-sm font-bold mb-2">I would like to</label>
+                            <select id="support-type" name="support_type" required class="w-full rounded-lg border border-stone-600 bg-stone-800 px-4 py-3 text-white focus:border-amber-500 focus:ring-2 focus:ring-amber-500/30">
+                                <option value="">Select an option</option>
+                                <option>Sponsor a child</option>
+                                <option>Volunteer</option>
+                                <option>Partner with LCCWA</option>
+                                <option>Make a donation</option>
+                                <option>Other support</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="support-message" class="block text-sm font-bold mb-2">Message</label>
+                        <textarea id="support-message" name="message" rows="5" required class="w-full rounded-lg border border-stone-600 bg-stone-800 px-4 py-3 text-white placeholder:text-stone-400 focus:border-amber-500 focus:ring-2 focus:ring-amber-500/30" placeholder="Please tell us how you would like to help."></textarea>
+                    </div>
+                    <p class="text-xs text-stone-400">Submitting opens your email application with this enquiry addressed to LCCWA.</p>
+                    <button type="submit" class="w-full sm:w-auto bg-amber-500 text-stone-900 font-bold px-7 py-3 rounded-full hover:bg-amber-400 transition-colors">Send support enquiry</button>
+                </form>
             </div>
         </section>
 
